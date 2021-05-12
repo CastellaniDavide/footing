@@ -19,23 +19,42 @@
 using namespace std;
 
 // Variabiles
-int N;
+int N, M, tmp1, tmp2, tmp3, result;
+vector <vector <pair<int, int> > > conn;
+
+void my_search (int init; int pos; vector <int> old, int street) {
+    if (pos != init) {
+
+    }
+    for (size_t i; i < conn[pos].size(); ++i) {
+
+    }
+}
 
 // Main code
 int main()
 {
   // Cncomment the following lines if you want to read/write from files
-  // freopen("input.txt", "r", stdin);
+  freopen("input.txt", "r", stdin);
   // freopen("output.txt", "w", stdout);
 
   // Input
-  cin >> N;
+  cin >> N >> M;
+  conn.resize(N);
+  result = INT_MIN;
 
-  // Code
-  // ...
+  for(size_t i = 0; i < M; ++i) {
+    cin >> tmp1 >> tmp2 >> tmp3;
+    conn[tmp1].push_back(make_pair(tmp2, tmp3));
+    conn[tmp2].push_back(make_pair(tmp1, tmp3));
+  }
+
+  for (size_t i = 0; i < N; ++i) {
+
+  }
 
   // Output
-  cout << N << endl;
+  cout << result << endl;
 
   // End
   return 0;
